@@ -23,7 +23,12 @@ Four Algorthims:
 ![output](https://github.com/marwanabdrabou/Mobile_Price/blob/main/img/output.png)
 ___________________________________________________
 ## Website 
+**Homepage:**
+
 ![1](https://github.com/marwanabdrabou/Mobile_Price/blob/main/img/1.png)
 ![2](https://github.com/marwanabdrabou/Mobile_Price/blob/main/img/2.png)
+
+**Mobile Price Page:**
+
 ![3](https://github.com/marwanabdrabou/Mobile_Price/blob/main/img/3.png)
 ![4](https://github.com/marwanabdrabou/Mobile_Price/blob/main/img/4.png)
