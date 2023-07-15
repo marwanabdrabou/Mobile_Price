@@ -19,10 +19,11 @@ After evaluating the performance of each algorithm, it was found that the SVM al
 Based on these results,Mobile Shop company decided to use the SVM algorithm in their new feature to predict the price range of mobile phones based on their features. By using this algorithm, they hope to provide customers with accurate and reliable estimates of the price range of the mobile phone they are interested in purchasing.
 
 Four Algorthims:
+
 ![output](https://github.com/marwanabdrabou/Mobile_Price/blob/main/img/output.png)
 ___________________________________________________
 ## Website 
 ![1](https://github.com/marwanabdrabou/Mobile_Price/blob/main/img/1.png)
-![2](hhttps://github.com/marwanabdrabou/Mobile_Price/blob/main/img/2.png)
+![2](https://github.com/marwanabdrabou/Mobile_Price/blob/main/img/2.png)
 ![3](https://github.com/marwanabdrabou/Mobile_Price/blob/main/img/3.png)
 ![4](https://github.com/marwanabdrabou/Mobile_Price/blob/main/img/4.png)
