@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mopile Price</title>
+
+  <!-- font awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- css file link -->
+  <link rel="stylesheet" href="../static/css/form.css">
+
+</head>
+<body>
+
+  <!-- header section start -->
+
+<header class="header">
+
+    <a href="index.html" class="logo"><i class="fas fa-mobile"><span>Mobile Shop</span></i> </a>
+
+    <nav class="navbar">
+        <a href="index.html#home">home</a>
+        <a href="#services">services</a>
+    </nav>
+
+<div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+
+  <!-- header section end -->
+
+    <!-- form section start -->
+
+    <section class="formbox">
+
+      <h1 class="heading"> <span>Mobile Price</span></h1>
+  
+      <div class="row">
+  
+        <div class="image">
+          <img src="../static/image/Phone customization-pana.svg" alt="">
+        </div>
+  
+        <form method="POST", action="/MOBILE">
+          <h3>Price Predicting</h3>
+          <p>Answer the following questions then start.</p>
+            
+            <div class="form-group">
+            <label for="inp_age"> Ram: </label>
+            
+            <input type="number" name="ram" placeholder="MB" required="required" class="box" value="ram"/>
+            </div>
+            
+            <h4></h4>
+            
+            <div class="form-group">
+            <label for="inp_age">Battery Power: </label>
+            <input type="number" name="battery_power" placeholder="mAh" required="required" class="box" value="battery_power" />
+            </div>
+            
+            <h4></h4>
+
+            <div class="form-group">
+              <label for="inp_age">Pixel Resolution Height: </label>
+              <input type="number" name="px_height" placeholder="pixels" required="required" class="box" value="px_height" min="320"/>
+            </div>
+            
+            <h4></h4>
+
+            <div class="form-group">
+            <label for="inp_age">Pixel Resolution Width: </label>
+            <input type="number" name="px_width" placeholder="pixels" required="required" class="box" value="px_width" min="240"/>
+            </div>
+            
+            <h4></h4>
+            
+            <div class="form-group">
+            <label for="inp_age">Internal Memory: </label>
+            <input type="number" name="int_memory" placeholder="GB" required="required" class="box" value="int_memory" />
+            </div>
+            <h4></h4>
+          <button type="submit" class="btn", value='pred'>start</button>
+
+        </form>
+  
+      </div>
+      <!-- API result section start -->
+      <div class="predict">
+        {% if pred %}
+        <h2> Result: <i> {{pred}} </i></h2>
+        {% endif %}
+      </div>
+      <!-- API result section end -->
+    </section>
+
+  <!-- form section end -->
+
+  <!-- API result section start -->
+    <section>
+    </section>
+
+  <!-- API result section end -->
+
+  <!-- footer section starts  -->
+
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="index.html#home"> <i class="fas fa-chevron-right"></i> home </a>
+          <a href="index.html#services"> <i class="fas fa-chevron-right"></i> services </a>
+      </div>
+
+      
+      <div class="box">
+          <h3>contact info</h3>
+          <a href="#"> <i class="fas fa-phone"></i> +20 1025625790 </a>
+          <a href="mailto:marwangamal507@gmail.com?"> <i class="fas fa-envelope"></i> marwangamal507@gmail.com </a>
+          <a href="#"> <i class="fas fa-map-marker-alt"></i> cairo, egypt</a>
+      </div>
+
+      <div class="box">
+          <h3>follow us</h3>
+          <a href="https://www.linkedin.com/in/marwan-gamal-0a12a71b5/"> <i class="fab fa-linkedin"></i> LinkedIn </a>
+          <a href="https://github.com/marwanabdrabou"> <i class="fab fa-github"></i> Github </a>
+
+
+      </div>
+
+  </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+<!-- js file link -->
+<script src="../static/js/script.js"></script>
+
+
+
+<script>
+
+const myForm = document.getElementById('myForm');
+const searchParams = new URLSearchParams();
+
+myForm.addEventListener('submit' , function (e) {
+  // to prevent page from reload when send data
+  e.preventDefault();    
+  
+  const formData = new FormData(this);
+
+  fetch('php/form.php' , {
+    method: 'post' ,
+    body: formData
+  }).then(function (response) {
+    return response.text();
+    
+  }).then(function (text) {
+    console.log(text);
+
+  }).catch(function (error) {
+    console.error(error);
+  })
+
+})
+
+</script>
+
+</body>
+</html>
